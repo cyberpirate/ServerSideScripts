@@ -1,0 +1,68 @@
+Here are some scripts I use on my server
+
+
+
+getip.sh
+
+DESCRIPTION
+I wrote this to notify me if my home server external
+ip address changed, being dynamic and all. It uses
+whatismyip.com's automation service to grab the ip
+and compares it to the old ip to see if you should be
+notified. The rules are you can't hit the page more
+than every 300 seconds. Check this page for up to
+date rules
+
+http://www.whatismyip.com/automation/default.asp
+
+I suggest placing it in cron.hourly
+
+INSTALL
+Edit the email variable in this one with the email you want to be notified by
+make executable (chmod +x file)
+Place in /etc/cron.hourly
+
+TODO
+more ways to notify?
+
+
+
+MagtoTor.sh
+
+DESCRIPTION
+
+Changes info hashes to magnet links and magnet links
+to torrents. NOTE The torrents produced by this script
+only work in rtorrent. It can print magnet links from
+.infohash files in the watch directory or info hashes
+passed to it from command line
+
+INSTALL
+edit watchdir variable
+make it executable (chmod +x file)
+copy to your $PATH or something
+
+TODO
+Maybe I will reorganize the script, otherwise its pretty much finished
+
+
+
+Peerprotect.sh
+
+DESCRIPTION
+based on Peerprotect found here
+
+http://en.gentoo-wiki.com/wiki/Peerprotect
+
+That script didn’t work anymore so I updated
+it to work with iblocklist. All this script
+does is download the blocklist, and load it
+into iptables. It also opens the port range
+defined in the variables.
+
+INSTALLATION
+put it in some startup scripts
+make sure to update once in a while (maybe a cron script?)
+
+TODO
+It's pretty much done at this point
