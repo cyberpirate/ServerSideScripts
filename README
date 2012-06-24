@@ -23,6 +23,8 @@ make executable (chmod +x file)
 Place in /etc/cron.hourly
 
 TODO
+There is a bug where it will sometimes email a new ip address even though it hasen't changed
+  -Might have something to do with running while the internet is down then re-running after the connection has been regained
 more ways to notify?
 
 
@@ -54,7 +56,7 @@ based on Peerprotect found here
 
 http://en.gentoo-wiki.com/wiki/Peerprotect
 
-That script didn’t work anymore so I updated
+That script didnï¿½t work anymore so I updated
 it to work with iblocklist. All this script
 does is download the blocklist, and load it
 into iptables. It also opens the port range
